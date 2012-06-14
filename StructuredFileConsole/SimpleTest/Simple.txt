@@ -1,0 +1,4 @@
+﻿AdditionalInfo;This is some additional info on the Simple Root;
+First;Title;Description of first entry
+Child;Title of Child that belongs to First Node;A longer description
+AdditionalInfo;And some additional info for the Child;213
