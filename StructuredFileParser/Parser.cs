@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
@@ -83,13 +84,19 @@ namespace FlatFileParser
         {
             if ((propertyInfo.PropertyType == typeof(double) || propertyInfo.PropertyType == typeof(double?)) && !string.IsNullOrEmpty(value))
             {
-                propertyInfo.SetValue(inst, Convert.ToDouble(value), null);
+                propertyInfo.SetValue(inst, Convert.ToDouble(value, CultureInfo.InvariantCulture), null);
                 return;
             }
 
             if ((propertyInfo.PropertyType == typeof(int) || propertyInfo.PropertyType == typeof(int?)) && !string.IsNullOrEmpty(value))
             {
                 propertyInfo.SetValue(inst, Convert.ToInt32(value), null);
+                return;
+            }
+
+            if ((propertyInfo.PropertyType == typeof(decimal) || propertyInfo.PropertyType == typeof(decimal?)) && !string.IsNullOrEmpty(value))
+            {
+                propertyInfo.SetValue(inst, Convert.ToDecimal(value, CultureInfo.InvariantCulture), null);
                 return;
             }
 

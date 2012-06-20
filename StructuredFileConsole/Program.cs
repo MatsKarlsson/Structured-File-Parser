@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using FlatFileConsole.Lib;
+using FlatFileConsole.Order;
 using FlatFileConsole.SimpleTest;
 using FlatFileConsole.TwoDigitTest;
 using FlatFileParser;
@@ -13,6 +14,11 @@ namespace FlatFileConsole
     {
         static void Main()
         {
+
+            var orderParser = new FileParser<OrderFile>();
+            var order = orderParser.Parse(@"Order\Order.txt");
+
+
             //Creates a parser
             var simpleRootParser = new FileParser<SimpleRoot>();
 

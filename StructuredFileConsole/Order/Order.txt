@@ -1,0 +1,8 @@
+﻿Order;123;2012-01-01
+Item;Thing;2;3.20
+Item;Bucket;2;2.50
+Item;Stuff;2;2.00
+Item;Thing;2;2.10
+Order;124;2012-02-02
+Item;More Stuff;12;12.40
+Item;Plenty of Buckets;22;100
