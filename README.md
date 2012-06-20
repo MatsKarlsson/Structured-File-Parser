@@ -10,7 +10,7 @@ It's like XmlSerializer, but for structured text files
 ## Structured files?
 
 Files in a specific format that could be grouped into columns or similar.
-It could be CSV-files, semicolon delimitered, tab, fixed widtdh.
+It could be CSV-files, semicolon delimitered, tab, fixed width.
 
 It could be a simple list of items or hierarhical files containg items and sub items.
 
@@ -69,4 +69,4 @@ Yes the project `StructuredFileConsole` contains a couple of examples.
 
 ## License
 
-[MIT License](https://github.com/MatsKarlsson/Structured-File-Parser/blob/license.md)
+[MIT License](https://github.com/MatsKarlsson/Structured-File-Parser/blob/master/license.md)
