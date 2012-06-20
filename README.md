@@ -16,15 +16,16 @@ It could be a simple list of items or hierarhical files containg items and sub i
 
 ### What could it do?
 
-It could turn a order file like this:
->    `Order;123;2012-01-01`
->    `Item;Thing;2;3.20`
->    `Item;Bucket;2;2.50`
->    `Item;Stuff;2;2.00`
->    `Item;Thing;2;2.10`
->    `Order;124;2012-02-02`
->    `Item;More Stuff;12;12.40`
->    `Item;Plenty of Buckets;22;100`
+It could turn a order file containing the following rows:
+
+* Order;123;2012-01-01
+* Item;Thing;2;3.20
+* Item;Bucket;2;2.50
+* Item;Stuff;2;2.00
+* Item;Thing;2;2.10
+* Order;124;2012-02-02
+* Item;More Stuff;12;12.40
+* Item;Plenty of Buckets;22;100
 
 Into a OrderInstance with a list of two orders containing four and two items
     
