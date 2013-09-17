@@ -48,7 +48,7 @@
     <Compile Include="ParseEntries.cs" />
     <Compile Include="ParseEntry.cs" />
     <Compile Include="ParseFormatAttribute.cs" />
-    <Compile Include="FileParser.cs" />
+    <Compile Include="RegExParser.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="ParseRootAttribute.cs" />
     <Compile Include="ObjectInstance.cs" />

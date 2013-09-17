@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace FlatFileParser
@@ -20,13 +21,19 @@ namespace FlatFileParser
             var types = rootNode.Assembly.GetTypes();
             foreach (var type in types)
             {
-                var attrs = type.GetCustomAttributes(typeof(ParseFormatAttribute), false);
-                foreach (ParseFormatAttribute attr in attrs)
-                    _parseEntries.Add(attr.RowIdentifier, new ParseEntry { Type = type, ParseFormat = new Regex(attr.Format), ParentAttributeName = attr.ParentAttributeName });
+
+                var attrs = type.GetCustomAttributes(typeof(ParseFormatAttribute), false) as ParseFormatAttribute[] ?? new ParseFormatAttribute[0];
+                foreach (ParseFormatAttribute attr in attrs.Where(d=>d.RowIdentifier != null))
+                    _parseEntries.Add( type.Namespace + "." + attr.RowIdentifier,  new ParseEntry
+	                    {
+		                    Type = type, 
+							ParseFormat = new Regex(attr.Format), 
+							ParentAttributeName = attr.ParentAttributeName
+	                    });
             }
         }
 
-        public bool ContainsKey(string key)
+        public bool ContainsRowIdentifier(string key)
         {
             return _parseEntries.ContainsKey(key);
         }

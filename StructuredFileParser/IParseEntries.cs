@@ -6,7 +6,7 @@ namespace FlatFileParser
     {
         void Clear();
         void Load(Type rootNode);
-        bool ContainsKey(string key);
+        bool ContainsRowIdentifier(string key);
         ParseEntry this[string key] { get; }
     }
 }

@@ -46,10 +46,11 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileParserTest.cs" />
+    <Compile Include="FileParserTest_Array.cs" />
+    <Compile Include="FileParserTest_Complex.cs" />
     <Compile Include="ParserTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TwoDigit.cs" />
+    <Compile Include="ComplexTestRoot.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StructuredFileParser\StructuredFileParser.csproj">

@@ -15,12 +15,12 @@ namespace FlatFileConsole
         static void Main()
         {
 
-            var orderParser = new FileParser<OrderFile>();
+            var orderParser = new RegExParser<OrderFile>();
             var order = orderParser.Parse(@"Order\Order.txt");
 
 
             //Creates a parser
-            var simpleRootParser = new FileParser<SimpleRoot>();
+            var simpleRootParser = new RegExParser<SimpleRoot>();
 
             Console.WriteLine("--- Simple ---");
             var simple = simpleRootParser.Parse(@"SimpleTest\Simple.txt");
@@ -37,15 +37,14 @@ namespace FlatFileConsole
 
 
             Console.WriteLine("--- Two Digit row type ---");
-            var rootNode = new FileParser<TwoDigitList>().Parse(@"TwoDigitTest\TwoDigitListTestFile.txt");
+            var rootNode = new RegExParser<TwoDigitList>().Parse(@"TwoDigitTest\TwoDigitListTestFile.txt");
             Console.WriteLine(XmlUtils.ToXml(rootNode));
 
 
-            var rootNode2 = new FileParser<TwoDigit>().Parse(@"TwoDigitTest\TwoDigitTestFile.txt");
+            var rootNode2 = new RegExParser<TwoDigit>().Parse(@"TwoDigitTest\TwoDigitTestFile.txt");
             Console.WriteLine(XmlUtils.ToXml(rootNode2));
             Console.WriteLine("Done!");
             Console.ReadLine();
-
         }
     }
 }
