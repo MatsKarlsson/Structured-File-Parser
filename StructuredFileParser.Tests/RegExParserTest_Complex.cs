@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace StructuredFileParser.Tests
 {
 	[TestClass]
-	public class FileParserTest_Complex
+	public class RegExParserTest_Complex
 	{
 		[TestMethod]
 		public void Parse_ParsingFile_ReturnsComplexObjectGraph()

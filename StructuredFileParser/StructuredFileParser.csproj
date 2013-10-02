@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="IParseEntries.cs" />
     <Compile Include="IParser.cs" />
+    <Compile Include="ParameterAttribute.cs" />
     <Compile Include="ParseEntries.cs" />
     <Compile Include="ParseEntry.cs" />
     <Compile Include="ParseFormatAttribute.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="ParseRootAttribute.cs" />
     <Compile Include="ObjectInstance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleParser.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

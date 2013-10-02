@@ -47,10 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileParserTest_Array.cs" />
-    <Compile Include="FileParserTest_Complex.cs" />
+    <Compile Include="RegExParserTest_Complex.cs" />
     <Compile Include="ParserTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ComplexTestRoot.cs" />
+    <Compile Include="SimpleParserTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StructuredFileParser\StructuredFileParser.csproj">
